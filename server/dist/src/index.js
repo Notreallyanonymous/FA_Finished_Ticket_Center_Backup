@@ -11,6 +11,9 @@ const helmet_1 = __importDefault(require("helmet"));
 const morgan_1 = __importDefault(require("morgan"));
 const projectRoutes_1 = __importDefault(require("./Routes/projectRoutes"));
 const tasksRoutes_1 = __importDefault(require("./Routes/tasksRoutes"));
+const searchRoutes_1 = __importDefault(require("./Routes/searchRoutes"));
+const userRoutes_1 = __importDefault(require("./Routes/userRoutes"));
+const teamRoutes_1 = __importDefault(require("./Routes/teamRoutes"));
 /* Route Configurations */
 /* Configurations */
 dotenv_1.default.config();
@@ -28,6 +31,9 @@ app.get('/', (req, res) => {
 });
 app.use("/projects", projectRoutes_1.default);
 app.use("/tasks", tasksRoutes_1.default);
+app.use("/search", searchRoutes_1.default);
+app.use("/users", userRoutes_1.default);
+app.use("/teams", teamRoutes_1.default);
 /* Server */
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

@@ -2,6 +2,12 @@
 
 import React, { useState } from 'react';
 import ProjectHeader from '@/app/projects/ProjectHeader';
+import Board from "../BoardView"
+import List from "../ListView"
+import Timeline from "../TimelineView"
+import Table from "../TableView"
+import ModalNewTask from '@/components/ModalNewTask'
+
 
 type Props = {
   params: { id: string };
@@ -10,13 +16,28 @@ type Props = {
 const Project = ({ params }: Props) => {
   const { id } = params;
   const [activeTab, setActiveTab] = useState("Board");
-  const [isModalTaskOpen, setIsModalTaskOpen] = useState(false);
+  const [isModalNewTaskOpen, setIsModalTaskOpen] = useState(false);
 
   return (
     <div>
-      {/* Modal */}
+      <ModalNewTask
+        isOpen={isModalNewTaskOpen}
+        onClose={()=> setIsModalTaskOpen(false)}
+        id={id}
+        />
       <ProjectHeader activeTab={activeTab} setActiveTab={setActiveTab} />
-      {/* Add any additional content here */}
+      {activeTab === "Board" && (
+        <Board id={id} setIsModalNewTaskOpen={setIsModalTaskOpen} />
+      )}
+      {activeTab === "List" && (
+        <List id={id} setIsModalNewTaskOpen={setIsModalTaskOpen} />
+      )}
+      {activeTab === "Timeline" && (
+        <Timeline id={id} setIsModalNewTaskOpen={setIsModalTaskOpen} />
+      )}
+        {activeTab === "Table" && (
+        <Table id={id} setIsModalNewTaskOpen={setIsModalTaskOpen} />
+      )}
     </div>
   );
 };

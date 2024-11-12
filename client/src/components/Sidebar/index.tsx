@@ -68,12 +68,12 @@ const Sidebar = () => {
           href="/settings" />
           <SidebarLink 
           icon = {User}
-          label = "User"
-          href="/user" />
-          <SidebarLink 
-          icon = {Users}
           label = "Users"
           href="/users" />
+          <SidebarLink 
+          icon = {Users}
+          label = "Teams"
+          href="/teams" />
           </nav>  
 
         {/* Ticket Links */}
@@ -115,8 +115,8 @@ const Sidebar = () => {
                 href="/priority/high" />
                  <SidebarLink 
                 icon = {AlertTriangleIcon}
-                label = "Meduim"
-                href="/priority/meduim" />
+                label = "Medium"
+                href="/priority/medium" />
                  <SidebarLink 
                 icon = {AlertOctagon}
                 label = "Low"

@@ -6,6 +6,9 @@ import  helmet from "helmet";
 import  morgan from "morgan";
 import projectRoutes from "./Routes/projectRoutes"
 import tasksRoutes from "./Routes/tasksRoutes"
+import searchRoutes from "./Routes/searchRoutes"
+import  userRoutes  from "./Routes/userRoutes";
+import teamRoutes from "./Routes/teamRoutes"
 
 /* Route Configurations */
 
@@ -28,6 +31,9 @@ app.get('/', (req , res)=>{
 
 app.use("/projects" , projectRoutes)
 app.use("/tasks" , tasksRoutes)
+app.use("/search" , searchRoutes)
+app.use("/users" , userRoutes)
+app.use("/teams" , teamRoutes)
 
 
 /* Server */
