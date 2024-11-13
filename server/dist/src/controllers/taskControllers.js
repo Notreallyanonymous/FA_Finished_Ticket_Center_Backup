@@ -53,7 +53,7 @@ const updateTasks = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
 });
 exports.updateTasks = updateTasks;
 const createTask = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { title, description, status, priority, tags, startDate, dueDate, points, projectId, authorUserId, assignedUserId, } = req.body;
+    const { title, description, status, priority, tags, startDate, dueDate, points, projectId, attachments, authorUserId, assignedUserId, } = req.body;
     try {
         const newTask = yield prisma.task.create({
             data: {
@@ -66,6 +66,7 @@ const createTask = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
                 dueDate,
                 points,
                 projectId,
+                attachments,
                 authorUserId,
                 assignedUserId,
             },
