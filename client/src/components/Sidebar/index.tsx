@@ -79,7 +79,7 @@ const Sidebar = () => {
         {/* Ticket Links */}
 
           <button onClick={()=> setShowProjects((prev) => !prev)} className="flex w-full items-center justify-between px-8 py-3 text-gray-500">
-            <span className="">Tickets</span>
+            <span className="">Team</span>
             {showProjects ? (
               <ChevronUp className="h-5 w-5"/>
             ) : (<ChevronDown className="h-5 w-5" />)}

@@ -63,7 +63,6 @@ export const createTask = async (
       dueDate,
       points,
       projectId,
-      attachments,
       authorUserId,
       assignedUserId,
     } = req.body;
@@ -79,7 +78,6 @@ export const createTask = async (
           dueDate,
           points,
           projectId,
-          attachments,
           authorUserId,
           assignedUserId,
         },
