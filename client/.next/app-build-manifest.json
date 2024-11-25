@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/users/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/users/page.js"
+      "static/chunks/app/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -11,10 +11,16 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/page": [
+    "/projects/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/css/app/projects/[id]/page.css",
+      "static/chunks/app/projects/[id]/page.js"
+    ],
+    "/users/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/users/page.js"
     ],
     "/timeline/page": [
       "static/chunks/webpack.js",
@@ -22,36 +28,45 @@
       "static/css/app/timeline/page.css",
       "static/chunks/app/timeline/page.js"
     ],
-    "/projects/[id]/page": [
+    "/priority/urgent/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/projects/[id]/page.css",
-      "static/chunks/app/projects/[id]/page.js"
+      "static/chunks/app/priority/urgent/page.js"
     ],
-    "/search/page": [
+    "/priority/low/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/search/page.js"
+      "static/chunks/app/priority/low/page.js"
     ],
-    "/settings/page": [
+    "/priority/medium/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/settings/page.js"
+      "static/chunks/app/priority/medium/page.js"
+    ],
+    "/priority/backlog/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/priority/backlog/page.js"
     ],
     "/teams/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/teams/page.js"
     ],
-    "/priority/high/page": [
+    "/settings/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/priority/high/page.js"
+      "static/chunks/app/settings/page.js"
     ],
-    "/priority/urgent/page": [
+    "/search/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/priority/urgent/page.js"
+      "static/chunks/app/search/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
